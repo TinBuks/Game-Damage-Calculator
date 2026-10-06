@@ -10,26 +10,26 @@ headers = ["Weapon", "Damage", "Power Attack", "Cost"]
 for weapon in melee_weapons:
   name = weapon[0]
   damage = weapon[1]
-  power_attack = math.pow(damage, 2)
-  cost = math.pow(damage, 2.6)
+  power_attack = (damage * 2)
+  cost = round(math.pow(damage, 2) / 5) * 5
   cost = int(cost)
   results.append([name, damage, power_attack, cost])
 
 for weapon in ranged_weapons:
   name = weapon[0]
   damage = weapon[1]
-  power_attack = math.pow(damage, 2.8)
+  power_attack = (damage * 3)
   power_attack = int(power_attack)
-  cost = math.pow(damage, 2.6)
+  cost = round(math.pow(damage, 1.6) / 5) * 5
   cost = int(cost)
   results.append([name, damage, power_attack, cost])
 
 for weapon in magic_weapons:
   name = weapon[0]
   damage = weapon[1]
-  power_attack = math.pow(damage, 1.6)
+  power_attack = (damage * 1.5)
   power_attack = int(power_attack)
-  cost = math.pow(damage, 2.6)
+  cost = round(math.pow(damage, 2.3) / 5) * 5
   cost = int(cost)
   results.append([name, damage, power_attack, cost])
 
